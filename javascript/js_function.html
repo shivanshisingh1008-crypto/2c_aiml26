@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function</title>
+  <script>
+    function F(fn)
+    {
+      let FN=fn;
+      return FN;
+    }
+    function L(ln)
+    {
+      let LN=ln;
+      return LN;
+    }
+    function fullname()
+    {
+      let firstname=F("vikas");
+      let lastname=L("kumar");
+      document.write(firstname + " " + lastname);
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="Full name" onclick="fullname()">
+</body>
+</html>

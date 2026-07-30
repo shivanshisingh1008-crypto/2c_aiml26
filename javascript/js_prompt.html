@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pop-up box</title>
+</head>
+<body>
+  <script>
+  function info()
+  {
+    let age=parseInt(prompt("Enter your age: "));
+    if(age<18)
+    {
+      alert("You are not eligible to vote");
+    }
+    else
+    {
+      alert("You are eligible to vote");
+    }
+    alert("Your age is: " + age);
+  }
+  </script>
+  <input type="button" value="vote" onclick="info()">
+</body>
+</html>
