@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Operations</title>
+  <script>
+    let arr=[1,2,3,4,5];
+    console.log(arr);
+    document.write(arr);
+    let L=arr.push(6);
+    console.log(L);
+    document.write(L);
+    let p=arr.pop();
+    console.log(p);
+    document.write(p);
+    console.log(arr.length);
+    c=arr.shift();
+    console.log(c);
+    document.write(c);
+    d=arr.unshift(1);
+    console.log(d);
+    document.write(d);
+    e=arr.splice(2,1);  //2 is indexing and 1 is no. of element to be deleted
+    console.log(e);
+    document.write(e);
+    f=arr.splice(2,0,6,7,8) //2 is indexing and 0 is no. of element to be deleted and 6,7,8 are the elements to be added
+    console.log(f)
+    document.write(f);
+    g=arr.splice(2,0,3) //2 is indexing and 5 is the end index (exclusive)
+    console.log(g);
+    document.write(g);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
