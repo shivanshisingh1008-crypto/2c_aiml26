@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User define object</title>
+</head>
+<body>
+  <script>
+    let student = {
+      name: "vikas",
+      age: 20,
+      grade: "A",
+      city: "Ghaziabad",
+      learning: function() {
+        console.log("learning tech courses");
+      }
+    };
+    
+    console.log(student.name);
+    console.log(student.age);
+    console.log(student.grade);
+    console.log(student.city);
+    student.learning();
+    student.pincode = 201009;
+    student.hobbies = ["reading", "traveling", "coding"];
+    console.log(student.pincode);
+    console.log(student.hobbies);
+    student.yoga = function() {
+      console.log("pranayama and meditation");
+    };
+    student.yoga();
+  </script>
+</body>
+</html>
