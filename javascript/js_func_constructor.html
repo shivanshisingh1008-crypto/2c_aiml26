@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Constructor</title>
+</head>
+<body>
+  <script>
+    // class Hello{
+    //   Hello(int a , string b){
+    //     int id=a;
+    //     string name=b;
+
+    //   }
+    // };
+    // Hello h1=new Hello(101,"vikas");
+    // console.log(h1.id);
+    // console.log(h1.name);
+    // Hello h2=new Hello(102,"vivek");
+    // console.log(h2.id);
+    // console.log(h2.name);
+
+
+
+    function student(id,name,city){
+      this.id=id;
+      this.name=name;
+      this.city=city;
+    }
+    let st1= new student(1,"vikas","ghaziabad");
+    console.log(st1.id);
+    console.log(st1.name);
+    console.log(st1.city);
+    let st2= new student(2,"sachin","delhi");
+    console.log(st2.id);
+    console.log(st2.name);
+    console.log(st2.city);
+  </script>
+</body>
+</html>
