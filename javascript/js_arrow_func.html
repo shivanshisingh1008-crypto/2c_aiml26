@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow function</title>
+</head>
+<body>
+  <script>
+  /*  function sum(){
+      let a=10;
+      let b=20
+      c=a+b;
+      return c;
+    }
+
+  let sum=function(){
+    let a=10;
+    let b=20;
+    c=a+b;
+    return c;
+  }*/
+
+//upper functions are normal function. now the following funcyions are arrow function (they will reduce the line of code)
+
+sum=() =>
+{
+  let a=10;
+  let b=20;
+  c=a+b;
+  return c;
+}
+
+console.log(sum())
+
+
+//display= name => console.log(name);
+
+fullname=(first , last) => {
+  
+  return `${first} ${last}`;
+}
+let first="vikas"
+  let last="chodhary"
+console.log(fullname(first, last))
+
+  </script>
+</body>
+</html>
