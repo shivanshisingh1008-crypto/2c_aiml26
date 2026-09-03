@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest Operator</title>
+</head>
+<body>
+  <script>
+   /* function sum(...values){
+      let total=0;
+      for(let i of values){
+        total+=i;
+      }
+      return total;
+    }
+    console.log(sum(1,2,3,4,5));*/
+
+
+   /* function sum(...values){
+      let total=0;
+      for(let i of values){
+        total+=i;
+      }
+      return total;
+    }
+    console.log(sum(10,20,30,40,50));*/
+
+
+    function sum(name,...values){
+      let total=0;
+      for(let i of values){
+        total+=i;
+      }
+      return `${name} your total is ${total}`;
+    }
+    console.log(sum("vikas", 10, 20, 30, 40, 50));
+
+  </script>
+  
+</body>
+</html>
