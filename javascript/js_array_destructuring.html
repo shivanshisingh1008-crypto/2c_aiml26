@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Destructuring</title>
+</head>
+<body>
+  <script>
+    let student=["vikas" , 101, "modinagar", 201204]
+
+    let name = student[0];
+    let roll= student[1];
+    let city= student[2];
+    let pincode= student[3]
+
+    console.log(name)
+    console.log(roll)
+    console.log(city)
+    console.log(pincode)
+
+    let[na, rollno, ci, pinc]=student
+    console.log(na)
+    console.log(rollno)
+    console.log(ci)
+    console.log(pinc)
+
+    let[na, rolln=101, ci, pin=]=student
+  </script>
+  
+</body>
+</html>

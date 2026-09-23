@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stiatic variable and functions</title>
+</head>
+<body>
+  <script>
+    class Student{
+      static count=0;
+      constructor(name,rollno){
+        this.name=name;
+        this.rollno=rollno;
+        Student.count++;
+      }
+      display(){
+        console.log(this.name, this.rollno);
+      }
+      static getCount(){
+        console.log("Total Students: "+Student.count);
+      }
+    }
+
+    let student1= new Student("vikas",101);
+    let student2= new Student("sachin",102);
+    student1.display();
+    student2.display();
+    Student.getCount();
+  </script>
+  
+</body>
+</html>

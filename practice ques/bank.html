@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Account Management System</title>
+</head>
+<body>
+  <script>
+    class BankAccount {
+      static bankName = "SBI Bank";
+      static bankInfo() {
+        console.log(`Welcome to ${BankAccount.bankName}. We provide secure and reliable banking services.`);
+      }
+
+      constructor(accountNo, holderName, balance) {
+        this.accountNo = accountNo;
+        this.holderName = holderName;
+        this.balance = balance;
+      }
+
+      deposit(amount) {
+        if (amount > 0) {
+          this.balance += amount;
+          console.log(`Deposited: $${amount}. New Balance: $${this.balance}`);
+        } else {
+          console.log("Deposit amount must be positive.");
+        }
+      }
+
+      withdraw(amount) {
+        if (amount > 0 && amount <= this.balance) {
+          this.balance -= amount;
+          console.log(`Withdraw: $${amount}. New Balance: $${this.balance}`);
+        } else if (amount > this.balance) {
+          console.log("Insufficient balance for withdrawal.");
+        } else {
+          console.log("Withdrawal amount must be positive.");
+        }
+      }
+
+      displayBalance() {
+        console.log(`Account No: ${this.accountNo}, Holder Name: ${this.holderName}, Balance: $${this.balance}`);
+      }
+    }
+
+    
+    const account1 = new BankAccount(101, "ram", 500);
+    const account2 = new BankAccount(102, "shyam", 1000);
+
+    
+    account1.displayBalance();
+    account1.deposit(200);
+    account1.withdraw(100);
+    account1.withdraw(700); 
+
+  
+    account2.displayBalance();
+    account2.deposit(300);
+    account2.withdraw(500);
+    
+    
+    BankAccount.bankInfo();
+  </script>
+</body>
+</html>

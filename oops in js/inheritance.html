@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inheritance</title>
+</head>
+<body>
+  <script>
+    class Student{
+      constructor(name,rollno){
+        this.name=name;
+        this.rollno=rollno;
+      }
+      display(){
+        console.log(this.name, this.rollno);
+      }
+    }
+
+    class Result extends Student{
+      constructor(name,rollno,marks){
+        super(name,rollno);
+        this.marks=marks;
+      }
+      displayResult(){
+        console.log(this.name, this.rollno, this.marks);
+      }
+    }
+
+    let student1= new Result("vikas",101,90);
+    let student2= new Result("sachin",102,80);
+    student1.displayResult();
+    student2.displayResult();
+  </script>
+  
+</body>
+</html>

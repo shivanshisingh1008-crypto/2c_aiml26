@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Literals</title>
+</head>
+<body>
+  <script>
+    let name= "vikas";
+    let roll= 101;
+    let student = {
+      name: name,
+      roll: roll
+    }
+
+    let students= { name, roll}
+    console.log( student. name)
+    console.log(student.roll)
+    console.log(students.name)
+    console.log(students.roll)
+
+
+    /*let n= "stname"
+    
+    let stu={
+      [stname] : "vikas" 
+      ["first"+n] : "vikas"
+      ["last"+ n] : "choudhary"
+    }
+    console.log(stu.stname);
+    console.log(stu.firstname)
+    console.log(stu.lastname)*/
+
+    let names="vikas";
+    let rollno=101;
+    let stud={
+      names,rollno
+
+      display(){
+        console.log(this.names, this.rollno);
+      }
+    }
+
+
+  </script>
+</body>
+</html>
