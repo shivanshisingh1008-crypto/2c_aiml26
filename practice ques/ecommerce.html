@@ -1,0 +1,75 @@
+<!--E-Commerce Product System
+Create a class Product with productId, productName, and price. Add an instance method getDiscountedPrice(discount) to calculate the final price. Create a static method compareProducts(p1, p2) that accepts two Product objects and displays the product having the higher price. Create a derived class Electronics having an additional property warranty. Override a suitable display method so that electronics-specific information is also displayed.
+Concepts Covered: Objects as Arguments, Static Method, Instance Method, Inheritance, Overriding
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce product system</title>
+</head>
+<body>
+  <script>
+    class Product {
+      constructor(productId, productName, price) {
+        this.productId = productId;
+        this.productName = productName;
+        this.price = price;
+      }
+
+      getDiscountedPrice(discount) {
+        if (discount < 0 || discount > 100) {
+          console.log("Invalid discount percentage.");
+          return this.price;
+        }
+        const discountedPrice = this.price - (this.price * discount / 100);
+        return discountedPrice;
+      }
+
+      static compareProducts(p1, p2) {
+        if (p1.price > p2.price) {
+          console.log(`Product with higher price: ${p1.productName} ($${p1.price})`);
+        } else if (p2.price > p1.price) {
+          console.log(`Product with higher price: ${p2.productName} ($${p2.price})`);
+        } else {
+          console.log("Both products have the same price.");
+        }
+      }
+
+      display() {
+        console.log(`Product ID: ${this.productId}, Name: ${this.productName}, Price: $${this.price}`);
+      }
+    }
+
+    class Electronics extends Product {
+      constructor(productId, productName, price, warranty) {
+        super(productId, productName, price);
+        this.warranty = warranty;
+      }
+
+      display() {
+        super.display();
+        console.log(`Warranty: ${this.warranty} years`);
+      }
+    }
+
+    
+    const product1 = new Product(1, "Laptop", 1200);
+    const product2 = new Product(2, "Smartphone", 800);
+    const electronic1 = new Electronics(3, "TV", 1500, 2);
+
+    
+    product1.display();
+    console.log(`Discounted Price (10%): $${product1.getDiscountedPrice(10)}`);
+
+    
+    Product.compareProducts(product1, product2);
+
+    
+    electronic1.display();
+    console.log(`Discounted Price (15%): $${electronic1.getDiscountedPrice(15)}`);
+
+  </script>
+</body>
+</html>
