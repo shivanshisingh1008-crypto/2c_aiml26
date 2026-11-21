@@ -1,0 +1,22 @@
+
+const fs = require('fs');
+
+console.log("Start");
+
+fs.readFile(__filename, () => {
+
+    setTimeout(() => {
+        console.log("setTimeout executed");
+    }, 0);
+
+    setImmediate(() => {
+        console.log("setImmediate executed");
+    });
+
+    process.nextTick(() => {
+        console.log("process.nextTick executed");
+    });
+
+});
+
+console.log("End");
